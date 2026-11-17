@@ -37,18 +37,12 @@
 .speed i{display:block;height:6px;border-radius:3px;background:var(--orange);transform:skewX(-24deg)}
 .speed i:nth-child(1){width:64px}.speed i:nth-child(2){width:96px}.speed i:nth-child(3){width:48px}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin:40px 0 0;padding:0;list-style:none;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(1,16,36,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);width:max-content;max-width:100%}
-.facts li{padding:14px 22px;font-size:15px;color:#b9cbe4;line-height:1.3}
-.facts li+li{border-left:1px solid rgba(255,255,255,.16)}
-.facts b{display:block;color:#fff;font:800 italic 18px "Exo 2",sans-serif;margin-bottom:2px}
 @media(max-width:820px){
   .hero{display:block;min-height:0}
   .hero .bg{position:relative;width:100%;height:auto;aspect-ratio:4/3;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 30%);mask-image:linear-gradient(0deg,transparent 0,#000 30%)}
   .hero::after{display:none}
   .hero .wrap{margin-top:-64px;padding-top:0}
-  .facts{grid-template-columns:minmax(0,1fr);width:100%}
-  .facts li+li{border-left:0;border-top:1px solid rgba(255,255,255,.16)}
-}
+    }
 @media(prefers-reduced-motion:no-preference){.speed i{animation:zoom .8s cubic-bezier(.2,.8,.2,1) both}.speed i:nth-child(2){animation-delay:.08s}.speed i:nth-child(3){animation-delay:.16s}@keyframes zoom{from{transform:skewX(-24deg) translateX(-40px);opacity:0}}}
 
 /* promessas */
@@ -162,11 +156,6 @@
         <a class="btn btn-wa wa" href="https://wa.me/5515991240660" data-msg="Olá, Lavaset! Quero lavar meu carro. Vim pelo site."><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
         <a class="btn btn-ghost" href="#estetica">Ver serviços</a>
       </div>
-      <ul class="facts">
-        <li><b>Seg a sáb</b>das 8h às 18h</li>
-        <li><b>Vila Progresso</b>R. Pedro Álvares Cabral, 710</li>
-        <li><b>Frotas</b>carros a caminhões</li>
-      </ul>
     </div>
   </div>
 </header>
