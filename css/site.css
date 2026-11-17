@@ -1,0 +1,61 @@
+/* VOICE: lava-rápido premium — rápido no dia a dia, cuidadoso na estética
+   IDEA: a fachada iluminada da Lavaset ao entardecer: azul-noite, gota azul, faixas laranja de velocidade
+   PICTURE: a foto real da fachada, grande no topo, com o logo e as faixas da marca
+   COLOUR and TYPE: azul-noite #011024, azul gota #00a8ff, azul profundo #0a5bd8, laranja #ff6a10; Exo 2 itálico + Barlow
+   LAYOUT: topo escuro com foto, faixas de serviços claras e escuras alternadas, mapa e contato no fim */
+:root{
+  --night:#011024;--night2:#06204a;--blue:#00a8ff;--blue2:#0a5bd8;--orange:#ff6a10;--wa:#1f9d55;
+  --bg:#ffffff;--soft:#eef4fb;--ink:#08162b;--mute:#4b5d75;--line:#d6e2f0;
+  --r:16px;--max:1180px;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Barlow,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Exo 2",sans-serif;font-style:italic;font-weight:800;line-height:1.05;margin:0;text-wrap:balance}
+h2{font-size:clamp(30px,4.6vw,46px)}
+h3{font-size:22px;line-height:1.15}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 max(5vw,18px)}
+.band{padding:clamp(56px,8vw,104px) 0}
+.dark{background:var(--night);color:#fff}
+.soft{background:var(--soft)}
+.kick{display:flex;align-items:center;gap:10px;font:700 italic 15px "Exo 2",sans-serif;color:var(--blue);margin:0 0 14px}
+.kick::before{content:"";width:28px;height:4px;border-radius:2px;background:var(--orange)}
+.lead{font-size:19px;color:var(--mute);max-width:620px;margin:16px 0 0}
+.dark .lead{color:#c3d4ec}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:800 italic 18px "Exo 2",sans-serif;text-decoration:none;border:2px solid transparent;transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-blue{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-line{border-color:var(--line);color:var(--ink);background:#fff}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+
+/* topo fixo */
+.nav{position:sticky;top:0;z-index:20;background:rgba(1,16,36,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;flex:none}
+.brand img{width:40px;height:40px;border-radius:8px}
+.brand b{font:800 italic 26px/1 "Exo 2",sans-serif;letter-spacing:-.01em}
+.brand b span{color:var(--blue)}
+.menu{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:16px}
+.menu a{text-decoration:none;color:#d6e3f5;padding:8px 0}
+.menu a:hover{color:#fff}
+.nav .btn{min-height:44px;padding:0 18px;font-size:16px}
+@media(max-width:900px){.menu{display:none}.nav .btn{margin-left:auto}}
+@media(max-width:380px){.nav .btn span{display:none}.nav .btn{padding:0 12px}}
+
+/* rodapé */
+footer{background:#000a18;color:#9fb3cc;font-size:15px;padding:40px 0 96px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
+footer a{color:#d6e3f5}
+footer strong{color:#fff}
+
+/* WhatsApp flutuante */
+.float{position:fixed;right:16px;bottom:16px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.45)}
+.float svg{width:32px;height:32px;color:#fff}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
