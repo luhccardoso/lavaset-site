@@ -219,7 +219,7 @@ pre{white-space:pre-wrap;background:var(--soft);border:1px solid var(--line);bor
 {
 const DESTINO = '5515991240660';
 const SERV = ['Lavagem simples','Lavagem detalhada','Aspiração e limpeza interna','Higienização de bancos','Polimento','Enceramento','Lavagem de motor','Leva-e-traz'];
-const DIAS = ['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'];
+const DIAS = ['Seg','Ter','Qua','Qui','Sex','Sáb'];
 const $ = id => document.getElementById(id);
 const chip = (name, v) => `<label class="chip"><input type="checkbox" name="${name}" value="${v}"><span>${v}</span></label>`;
 $('serv').innerHTML = SERV.map(s => chip('serv', s)).join('');
